@@ -1,14 +1,14 @@
 'use client';
-import React, {useContext} from 'react';
-import { Drawer, DrawerProps, Card} from '@mui/material';
+import React, {useContext, useState} from 'react';
+import { Drawer, DrawerProps, Card, Snackbar, Alert} from '@mui/material';
 import { ButtonClose, BuyButton, CartContainer, CartContent, CartTitle, CartTitleBox, PriceBox, ProductButton, ProductCard, ProductImageBox, ProductTitle, QtdBox, RemoveButton, ValueContent } from './styles';
 import { CartContext } from '../../Context/CartProvider';
 import { currencyMask } from '../../utils/Mask';
 
 
 const Cart = (props: DrawerProps) => {
-    const { cart, open, setCartOpen, addToCart, removeFromCart, decreaseQuantity } = useContext(CartContext);
-
+    const { cart, open, setCartOpen, addToCart, removeFromCart, decreaseQuantity, clearCart } = useContext(CartContext);
+    const [success, setSuccess] = useState(false);
   return (
     <Drawer {...props} open={open} onClose={() => setCartOpen(false)} BackdropProps={{ invisible: true }} anchor='right'>
         <CartContainer>
@@ -64,9 +64,25 @@ const Cart = (props: DrawerProps) => {
                     {currencyMask(cart.reduce((acc, current) => acc + parseFloat(current.price) * current.quantity,0))}
                 </span>
             </ValueContent>
-            <BuyButton data-testid='buy-button' onClick={() => {}}>
+            <BuyButton 
+            data-testid='buy-button' 
+            onClick={() => {
+                if(cart.length > 0){
+                    setSuccess(true);
+                    clearCart();
+                }
+            }}>
                 Finalizar Compra
             </BuyButton>
+            <Snackbar
+            anchorOrigin={{ vertical:'top', horizontal:'center' }}
+            open={success}
+            autoHideDuration={6000}
+            onClose={() => setSuccess(false)}>
+                <Alert onClose={() => setSuccess(false)} severity="success" sx={{ width: '100%' }}>
+                    Compra realizada com sucesso!
+                </Alert>
+            </Snackbar>
         </CartContainer>
     </Drawer>   
   )
