@@ -8,8 +8,8 @@ const ProductContainer = styled.div`
   display: flex;  
   flex-wrap: wrap;
   align-items: flex-start;
-  justify-content: center;
-  gap: 22px;
+  justify-content: center;  
+  gap: 23px;
 
   @media only screen and (max-width: 375px) {
     padding-top: 18px;

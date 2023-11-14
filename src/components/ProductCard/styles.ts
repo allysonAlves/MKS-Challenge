@@ -1,6 +1,7 @@
 import styled from "styled-components";
 
 export const ProductCardContainer = styled.div`
+  margin-top: 20px;
   width: 218px;
   height: 285px;
   padding: 0;
@@ -17,6 +18,7 @@ export const ProductCardContainer = styled.div`
     margin: 8px 14px 12px;
     color: #333;
     height: 55px;
+    min-height: 55px ;
   }
 
   @media only screen and (max-width: 375px) {
@@ -57,6 +59,7 @@ export const ImageContainer = styled.div`
 
 export const ProductTitle = styled.div`
   height: 38px;
+  min-height: 38px;
   display: flex;
   justify-content: space-between;
   align-items: center;
