@@ -152,7 +152,7 @@ export const RemoveButton = styled.button`
 `;
 
 export const PriceBox = styled.div`  
-   
+    font-weight: bold;
     @media only screen and (max-width: 450px) {
         background-color: #333;
         color: white;
