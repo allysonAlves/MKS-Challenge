@@ -1,36 +1,64 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# MksChallenge - Loja Online
 
-## Getting Started
+Este é um projeto de loja online desenvolvido como parte do desafio MksChallenge. O objetivo principal do projeto é criar uma experiência de compra online interativa, incluindo funcionalidades como visualização de produtos, adição ao carrinho e finalização da compra.
 
-First, run the development server:
+## Tecnologias Utilizadas
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- **React**: Biblioteca JavaScript para criar interfaces de usuário.
+- **Next.js**: Framework React para desenvolvimento web.
+- **Styled Components**: Biblioteca para estilizar componentes de forma mais dinâmica no React.
+- **React Query**: Biblioteca para gerenciamento de estado global e dados assíncronos.
+- **Jest e Testing Library**: Para testes unitários e de integração.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Estrutura do Projeto
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+O projeto está organizado da seguinte forma:
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+- **`/components`**: Componentes React reutilizáveis, estilizados com Styled Components.
+- **`/Context`**: Contexto de aplicação, incluindo o provedor de carrinho.
+- **`/pages`**: Páginas Next.js que compõem a aplicação.
+- **`/services`**: Serviços de utilidade, como chamadas à API.
 
-## Learn More
+## Como Rodar o Projeto
 
-To learn more about Next.js, take a look at the following resources:
+1. **Instale as Dependências**:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+   ```bash
+   yarn install
+   ```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+2. **Execute o Projeto Localmente**:
 
-## Deploy on Vercel
+   ```bash
+   yarn dev
+   ```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+   O projeto estará disponível em [http://localhost:3000](http://localhost:3000).
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+3. **Execute Testes**:
+
+   ```bash
+   yarn test
+   ```
+
+   Este comando executará os testes unitários e de integração.
+
+4. **Crie uma Build de Produção**:
+
+   ```bash
+   yarn build
+   ```
+
+   Esta etapa cria uma versão otimizada para produção do aplicativo.
+
+5. **Execute o Projeto em Produção**:
+
+   ```bash
+   yarn start
+   ```
+
+   O aplicativo estará disponível em [http://localhost:3000](http://localhost:3000).
+
+## Considerações Finais
+
+Este projeto é um ponto de partida para uma aplicação de loja online. Sinta-se à vontade para expandi-lo adicionando mais funcionalidades, melhorando a interface do usuário e implementando integrações adicionais. Este README serve como um guia inicial, e você pode personalizá-lo conforme necessário. Divirta-se desenvolvendo a sua loja online!
