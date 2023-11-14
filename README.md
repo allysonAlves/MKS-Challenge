@@ -4,11 +4,11 @@ Este é um projeto de loja online desenvolvido como parte do desafio MksChalleng
 
 ## Tecnologias Utilizadas
 
-- **React**: Biblioteca JavaScript para criar interfaces de usuário.
 - **Next.js**: Framework React para desenvolvimento web.
 - **Styled Components**: Biblioteca para estilizar componentes de forma mais dinâmica no React.
 - **React Query**: Biblioteca para gerenciamento de estado global e dados assíncronos.
 - **Jest e Testing Library**: Para testes unitários e de integração.
+- **TypeScript**: Linguagem de programação que estende o JavaScript, oferecendo suporte à definição de tipos estáticos.
 
 ## Estrutura do Projeto
 
